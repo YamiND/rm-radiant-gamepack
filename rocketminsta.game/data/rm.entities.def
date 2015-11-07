@@ -34,3 +34,23 @@ t_length: maximum length of the beam. -1 for unlimited range. 0 (default) makes 
 -------- SPAWNFLAGS --------
 DISABLED: the beam is initially disabled and needs to be activated to start firing.
 */
+
+
+
+
+/*QUAKED func_magicwall (0.5 0.2 0.8) ? - - INVERTED TOGGLE
+[RocketMinsta entity]
+
+A func_wall that can solidify and disperse dynamically, with an optional fade transition.
+-------- KEYS --------
+alpha_solid: opacity when solid. Must be >0 and <=1. Default is 1 (fully opaque).
+alpha_nonsolid: opacity when dispersed. Must be >=0 and <=1. Default is 0 (invisible).
+target: triggers targeted entities when someone touches/steps on this.
+targetname: the name other entities can use to target this entity. The wall either solidifies or disperses when triggered.
+delay: time to wait before activating the targets. If target is not set, this is an alias for "wait" (not recommended).
+speed: the fade transition speed (not time; higher is faster). Default is 1. Use a negative value to make it instant. Note that this only affects the fading animation, as the solid state is always toggled instantly.
+wait: time to wait before returning to the original state (after the transition is finished). Default is 3 seconds. Negative values mean never return. This key is ignored if the TOGGLE flag is set.
+-------- SPAWNFLAGS --------
+INVERTED: this magicwall is dispersed by default and solidified when activated.
+TOGGLE: activating this magicwall will cause it to disperse if solidified, or solidify if dispersed. The magicwall will remain in its current state until it's activated again, the "wait" key is ignored.
+*/
