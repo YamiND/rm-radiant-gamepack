@@ -1,0 +1,27 @@
+
+/*QUAKED onslaught_controlpoint (0 .5 .8) (-32 -32 0) (32 32 128) 
+Control point.  Be sure to give this enough clearance so that the shootable part has room to exist
+This should link to an onslaught_controlpoint entity or onslaught_generator entity.
+-------- KEYS --------
+targetname: name that onslaught_link entities will use to target this.
+target: target any entities that are tied to this control point, such as vehicles and buildable structure entities.
+message: name of this control point (should reflect the location in the map, such as "center bridge", "north tower", etc)
+*/
+
+/*QUAKED onslaught_generator (0 .5 .8) (-32 -32 -24) (32 32 64) 
+Base generator.
+
+onslaught_link entities can target this.
+-------- KEYS --------
+team: team that owns this generator (5 = red, 14 = blue, etc), MUST BE SET.
+targetname: name that onslaught_link entities will use to target this.
+*/
+
+/*QUAKED onslaught_link (0 .5 .8) (-16 -16 -16) (16 16 16) 
+Link between control points.
+
+This entity targets two different onslaught_controlpoint or onslaught_generator entities, and suppresses shielding on both if they are owned by different teams.
+-------- KEYS --------
+target: first control point.
+target2: second control point.
+*/

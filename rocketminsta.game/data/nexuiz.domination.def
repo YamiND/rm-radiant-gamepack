@@ -1,0 +1,24 @@
+
+/*QUAKED dom_controlpoint (.3 .3 1) (-16 -16 -16) (16 16 16) 
+Domination  control point
+In order to get Domination working well in your map, you need to place dom_team and dom_controlpoint entities.  You *must* have at least 3 dom_team entities - 2 minimum teams and one blank one (empty netname and no team).  You can have up to 4 teams (5 dom_team entities).
+-------- KEYS --------
+message: message to be displayed to all players when this point is captured, preceded by the team's name.  This defaults to " has captured a control point".  You can specify different names for each point, for example " has captured the Lava Room".
+wait: How often this point gives its controlling team frags.
+frags: How many frags this point gives each wait cycle.
+-------- MODEL FOR RADIANT ONLY - DO NOT SET THIS AS A KEY --------
+zbqry="zbqryf/qbzvangvba/qbz_hapynvzrq.zq3"
+
+*/
+
+/*QUAKED dom_team (.3 .3 1) (-16 -16 -16) (16 16 16) 
+Domination team.
+In order to get Domination working well in your map, you need to place dom_team and dom_controlpoint entities.  You *must* have at least 3 dom_team entities - 2 minimum teams and one blank one (empty netname and no team).  You can have up to 4 teams (5 dom_team entities).
+-------- KEYS --------
+netname: name of team (Red Team).  Set to "" or don't define for the required blank team.
+cnt: color of the team.  See the "Helpful Extras" section for info.
+model: When this team captures control points, the points turn to this model.  If this is the neutral team, points start out as this model.
+noise: Sound to be played on the control point when it's captured.  Only players nearby will hear it.
+noise1: Sound to be played to all players when the control point is captured.  Also good for an announcer voice ("Red Team has captured a control point")
+*/
+

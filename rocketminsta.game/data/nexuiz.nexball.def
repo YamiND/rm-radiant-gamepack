@@ -1,0 +1,67 @@
+
+/*QUAKED nexball_basketball (.5 .2 0) (-16 -16 -16) (16 16 16)
+The basket ball type Nexball.
+-------- KEYS --------
+model: set this if you want to use your own model
+scale: if you're using your own model, change this to scale it to 32*32*32
+noise: played when the ball bounces
+noise1: played when the ball is dropped on the map
+noise2: played when the ball is stolen from the enemy
+*/
+
+/*QUAKED nexball_bluegoal (0 0 1) ?
+Blue goal. Defended by the blue team.
+-------- KEYS --------
+noise: sound played when a point is scored
+-------- SPAWNFLAGS --------
+GOAL_TOUCHPLAYER: The trigger also affects ball-carrying players (the ball is then auto-dropped)
+*/
+
+/*QUAKED nexball_fault (0.6 0.1 0) ?
+This acts as a goal that always gives points to the opposing team.
+-------- KEYS --------
+noise: sound played when a point is scored
+-------- SPAWNFLAGS --------
+GOAL_TOUCHPLAYER: The trigger also affects ball-carrying players (the ball is then auto-dropped)
+*/
+
+/*QUAKED nexball_football (.9 .9 .9) (-16 -16 -16) (16 16 16)
+The soccer type Nexball.
+-------- KEYS --------
+model: set this if you want to use your own model
+scale: if you're using your own model, change this to scale it to 32*32*32
+noise: played when the ball bounces
+noise1: played when the ball is dropped on the map
+*/ 
+
+/*QUAKED nexball_out (0.1 0.6 0) ?
+When the ball touches this, it is returned.
+-------- KEYS --------
+noise: sound played when a point is scored
+-------- SPAWNFLAGS --------
+GOAL_TOUCHPLAYER: The trigger also affects ball-carrying players (the ball is then auto-dropped)
+*/
+
+/*QUAKED nexball_pinkgoal (1 0 1) ?
+Pink goal. Defended by the pink team. Needs red, blue and yellow goals on the map to work.
+-------- KEYS --------
+noise: sound played when a point is scored
+-------- SPAWNFLAGS --------
+GOAL_TOUCHPLAYER: The trigger also affects ball-carrying players (the ball is then auto-dropped)
+*/
+
+/*QUAKED nexball_redgoal (1 0 0) ?
+Red goal. Defended by the red team.
+-------- KEYS --------
+noise: sound played when a point is scored
+-------- SPAWNFLAGS --------
+GOAL_TOUCHPLAYER: The trigger also affects ball-carrying players (the ball is then auto-dropped)
+*/
+
+/*QUAKED nexball_yellowgoal (1 1 0) ?
+Yellow goal. Defended by the yellow team. Needs both red and blue goals on the map to work.
+-------- KEYS --------
+noise: sound played when a point is scored
+-------- SPAWNFLAGS --------
+GOAL_TOUCHPLAYER: The trigger also affects ball-carrying players (the ball is then auto-dropped)
+*/

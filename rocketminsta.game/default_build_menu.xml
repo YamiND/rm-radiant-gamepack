@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<project version="2.0">
+<var name="q3map2">&quot;[RadiantPath]q3map2.[ExecutableType]&quot; -v<cond value="[MonitorAddress]"> -connect [MonitorAddress]</cond> -game nexuiz -fs_basepath &quot;[EnginePath]&quot;<cond value="[GameName]"> -fs_game [GameName]</cond></var>
+<var name="vmapc">&quot;[RadiantPath]vmapc[ExecutableType]&quot; -v<cond value="[MonitorAddress]"> -connect [MonitorAddress]</cond> -game nexuiz -fs_basepath &quot;[EnginePath]&quot; -fs_homepath &quot;[UserEnginePath]&quot;<cond value="[GameName]"> -fs_game [GameName]</cond></var>
+<build name="[q3map2] (single) BSP">
+<command>[q3map2] -meta &quot;[MapFile]&quot;</command>
+</build>
+<build name="[q3map2] (single) -vis">
+<command>[q3map2] -vis &quot;[MapFile]&quot;</command>
+</build>
+<build name="[q3map2] (single) -light, low quality">
+<command>[q3map2] -light -deluxe -cheapgrid -faster &quot;[MapFile]&quot;</command>
+</build>
+<build name="[q3map2] (single) -light, medium quality">
+<command>[q3map2] -light -deluxe -fast &quot;[MapFile]&quot;</command>
+</build>
+<build name="[q3map2] (single) -light, high quality">
+<command>[q3map2] -light -deluxe -fast -samples 3 &quot;[MapFile]&quot;</command>
+</build>
+<build name="[q3map2] (single) -minimap">
+<command>[q3map2] -minimap &quot;[MapFile]&quot;</command>
+</build>
+<build name="[q3map2] (single) rebuild only entities">
+<command>[q3map2] -onlyents &quot;[MapFile]&quot;</command>
+</build>
+<build name="[q3map2] (test)">
+<command>[q3map2] -meta -v -mv 1000000 -mi 6000000 &quot;[MapFile]&quot;</command>
+<command>[q3map2] -vis -saveprt &quot;[MapFile]&quot;</command>
+<command>[q3map2] -light -deluxe -fast -samples 3 &quot;[MapFile]&quot;</command>
+</build>
+<build name="[q3map2] (test) fast vis, fast light">
+<command>[q3map2] -meta -v -mv 1000000 -mi 6000000 &quot;[MapFile]&quot;</command>
+<command>[q3map2] -vis -saveprt -fast &quot;[MapFile]&quot;</command>
+<command>[q3map2] -light -deluxe -faster -cheapgrid -filter &quot;[MapFile]&quot;</command>
+</build>
+<build name="[q3map2] (test) fast vis, good light">
+<command>[q3map2] -meta -v -mv 1000000 -mi 6000000 &quot;[MapFile]&quot;</command>
+<command>[q3map2] -vis -saveprt -fast &quot;[MapFile]&quot;</command>
+<command>[q3map2] -light -deluxe -fast -samples 2 &quot;[MapFile]&quot;</command>
+<command>[q3map2] -minimap &quot;[MapFile]&quot;</command>
+</build>
+<build name="[q3map2] (final) simple lighting">
+<command>[q3map2] -meta -v -samplesize 8 -minsamplesize 4 -mv 1000000 -mi 6000000 &quot;[MapFile]&quot;</command>
+<command>[q3map2] -vis -saveprt &quot;[MapFile]&quot;</command>
+<command>[q3map2] -light -deluxe -fast -patchshadows -samples 2 &quot;[MapFile]&quot;</command>
+<command>[q3map2] -minimap &quot;[MapFile]&quot;</command>
+</build>
+<build name="[q3map2] (final) long distance lighting">
+<command>[q3map2] -meta -v -samplesize 8 -minsamplesize 4 -mv 1000000 -mi 6000000 &quot;[MapFile]&quot;</command>
+<command>[q3map2] -vis -saveprt &quot;[MapFile]&quot;</command>
+<command>[q3map2] -light -deluxe -patchshadows -samples 3 &quot;[MapFile]&quot;</command>
+<command>[q3map2] -minimap &quot;[MapFile]&quot;</command>
+</build>
+<build name="[q3map2] (final) + radiosity (Nexuiz 2.4.2 default)">
+<command>[q3map2] -meta -v -samplesize 8 -minsamplesize 4 -mv 1000000 -mi 6000000 &quot;[MapFile]&quot;</command>
+<command>[q3map2] -vis -saveprt &quot;[MapFile]&quot;</command>
+<command>[q3map2] -light -deluxe -patchshadows -samples 3 -bounce 8 -fastbounce -bouncegrid &quot;[MapFile]&quot;</command>
+<command>[q3map2] -minimap &quot;[MapFile]&quot;</command>
+</build>
+<build name="[q3map2] (final) + highres external lightmaps (Nexuiz 2.5 default, 2.5 required)">
+<command>[q3map2] -meta -v -samplesize 8 -minsamplesize 4 -mv 1000000 -mi 6000000 &quot;[MapFile]&quot;</command>
+<command>[q3map2] -vis -saveprt &quot;[MapFile]&quot;</command>
+<command>[q3map2] -light -deluxe -patchshadows -samples 3 -lightmapsize 512 -bounce 8 -fastbounce -bouncegrid &quot;[MapFile]&quot;</command>
+<command>[q3map2] -minimap &quot;[MapFile]&quot;</command>
+</build>
+<build name="[q3map2] (final) + ambient occlusion (Nexuiz 2.5 required)">
+<command>[q3map2] -meta -v -samplesize 8 -minsamplesize 4 -mv 1000000 -mi 6000000 &quot;[MapFile]&quot;</command>
+<command>[q3map2] -vis -saveprt &quot;[MapFile]&quot;</command>
+<command>[q3map2] -light -deluxe -patchshadows -samples 3 -lightmapsize 512 -bounce 8 -fastbounce -bouncegrid -dirty -dirtscale 2 &quot;[MapFile]&quot;</command>
+<command>[q3map2] -minimap &quot;[MapFile]&quot;</command>
+</build>
+<separator/>
+<build name="[vmapc] (single) -bsp">
+<command>[vmapc] -meta -v &quot;[MapFile]&quot;</command>
+</build>
+<build name="[vmapc] (single) -vis -fast">
+<command>[vmapc] -vis -saveprt &quot;[MapFile]&quot;</command>
+</build>
+<build name="[vmapc] (single) -vis">
+<command>[vmapc] -vis -saveprt &quot;[MapFile]&quot;</command>
+</build>
+<build name="[vmapc] (single) -light low">
+<command>[vmapc] -light -cheapgrid -faster -lazysubdivide &quot;[MapFile]&quot;</command>
+</build>
+<build name="[vmapc] (single) -light medium">
+<command>[vmapc] -light -fast -lazysubdivide &quot;[MapFile]&quot;</command>
+</build>
+<build name="[vmapc] (single) -light high (Vecxis default)">
+<command>[vmapc] -light -scale 0.333333 -deluxe -patchshadows -samples 4 -lightmapsize 512 -bouncegrid -fast -fastbounce -bounce 12 &quot;[MapFile]&quot;</command>
+</build>
+<build name="[vmapc] (single) -minimap">
+<command>[vmapc] -minimap &quot;[MapFile]&quot;</command>
+</build>
+<separator/>
+<build name="[vmapc] (single) rebuild only entities">
+<command>[vmapc] -onlyents &quot;[MapFile]&quot;</command>
+</build>
+<separator/>
+<build name="[vmapc] (test) -bsp, -vis -fast, -light low">
+<command>[vmapc] -meta -v &quot;[MapFile]&quot;</command>
+<command>[vmapc] -vis -fast -saveprt &quot;[MapFile]&quot;</command>
+<command>[vmapc] -light -cheapgrid -faster &quot;[MapFile]&quot;</command>
+</build>
+<build name="[vmapc] (test) -bsp, -vis, -light low">
+<command>[vmapc] -meta -v &quot;[MapFile]&quot;</command>
+<command>[vmapc] -vis -saveprt &quot;[MapFile]&quot;</command>
+<command>[vmapc] -light -cheapgrid -faster &quot;[MapFile]&quot;</command>
+</build>
+<build name="[vmapc] (test) -bsp, -vis, -light medium">
+<command>[vmapc] -meta -v &quot;[MapFile]&quot;</command>
+<command>[vmapc] -vis -saveprt &quot;[MapFile]&quot;</command>
+<command>[vmapc] -light -fast &quot;[MapFile]&quot;</command>
+</build>
+<separator/>
+<build name="[vmapc] (final) -bsp, -vis, -light high, -minimap (Vecxis default)">
+<command>[vmapc] -meta -v -samplesize 8 -mv 1000000 -mi 6000000 &quot;[MapFile]&quot;</command>
+<command>[vmapc] -vis -saveprt &quot;[MapFile]&quot;</command>
+<command>[vmapc] -light -scale 0.333333 -deluxe -patchshadows -samples 4 -lightmapsize 512 -bouncegrid -fast -fastbounce -bounce 12 -gamma 1.2 &quot;[MapFile]&quot;</command>
+<command>[vmapc] -minimap &quot;[MapFile]&quot;</command>
+</build>
+<separator/>
+<build name="[vmapc] convert to .OBJ for modelling apps">
+<command>[vmapc] -meta -v -patchmeta &quot;[MapFile]&quot;</command>
+<command>[vmapc] -convert -format obj &quot;[BspFile]&quot;</command>
+</build>
+<build name="[vmapc] convert to .OBJ for mapping">
+<command>[vmapc] -meta -v -patchmeta &quot;[MapFile]&quot;</command>
+<command>[vmapc] -convert -format obj -shadersasbitmap &quot;[BspFile]&quot;</command>
+</build>
+<separator/>
+<build name="[vmapc] convert to .ASE for modelling apps">
+<command>[vmapc] -meta -v -patchmeta &quot;[MapFile]&quot;</command>
+<command>[vmapc] -convert -format ase &quot;[BspFile]&quot;</command>
+</build>
+<build name="[vmapc] convert to .ASE for mapping">
+<command>[vmapc] -meta -v -patchmeta &quot;[MapFile]&quot;</command>
+<command>[vmapc] -convert -format ase -shadersasbitmap &quot;[BspFile]&quot;</command>
+</build>
+</project>

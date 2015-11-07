@@ -1,0 +1,226 @@
+
+/*QUAKED weapon_campingrifle (1 0 .5) (-30 -30 0) (30 30 32) FLOATING
+the Camping Rifle.
+-------- KEYS --------
+ammo_nails: initial bullets of the weapon (if unset, g_pickup_nails is used)
+respawntime: time till it respawns (default: 30)
+team: out of items with the same value here, only one (random one) will spawn. Useful to put multiple items on one spot.
+cnt: weight of this item for random selection using "team". Set to a lower value for items you want to see less likely.
+-------- SPAWNFLAGS --------
+FLOATING: the item will float in air, instead of aligning to the floor by falling
+-------- MODEL FOR RADIANT ONLY - DO NOT SET THIS AS A KEY --------
+model="models/weapons/g_campingrifle.md3"
+*/
+
+/*QUAKED weapon_crylink (1 0 .5) (-30 -30 0) (30 30 32) FLOATING
+the Crylink
+-------- KEYS --------
+ammo_cells: initial cells of the weapon (if unset, g_pickup_cells is used)
+respawntime: time till it respawns (default: 15)
+team: out of items with the same value here, only one (random one) will spawn. Useful to put multiple items on one spot.
+cnt: weight of this item for random selection using "team". Set to a lower value for items you want to see less likely.
+-------- SPAWNFLAGS --------
+FLOATING: the item will float in air, instead of aligning to the floor by falling
+-------- MODEL FOR RADIANT ONLY - DO NOT SET THIS AS A KEY --------
+model="models/weapons/g_crylink.md3"
+*/
+
+/*QUAKED weapon_electro (1 0 .5) (-30 -30 0) (30 30 32) FLOATING
+the Electro
+-------- KEYS --------
+ammo_cells: initial cells of the weapon (if unset, g_pickup_cells is used)
+respawntime: time till it respawns (default: 15)
+team: out of items with the same value here, only one (random one) will spawn. Useful to put multiple items on one spot.
+cnt: weight of this item for random selection using "team". Set to a lower value for items you want to see less likely.
+-------- SPAWNFLAGS --------
+FLOATING: the item will float in air, instead of aligning to the floor by falling
+-------- MODEL FOR RADIANT ONLY - DO NOT SET THIS AS A KEY --------
+model="models/weapons/g_electro.md3"
+*/
+
+/*QUAKED weapon_fireball (1 0 .5) (-30 -30 0) (30 30 32) FLOATING
+the Fireball
+-------- KEYS --------
+ammo_rockets: initial rockets of the weapon (if unset, g_pickup_rockets is used)
+respawntime: time till it respawns (default: 15)
+team: out of items with the same value here, only one (random one) will spawn. Useful to put multiple items on one spot.
+cnt: weight of this item for random selection using "team". Set to a lower value for items you want to see less likely.
+-------- SPAWNFLAGS --------
+FLOATING: the item will float in air, instead of aligning to the floor by falling
+-------- MODEL FOR RADIANT ONLY - DO NOT SET THIS AS A KEY --------
+model="models/weapons/g_fireball.md3"
+*/
+
+/*QUAKED weapon_grenadelauncher (1 0 .5) (-30 -30 0) (30 30 32) FLOATING
+the Mortar
+-------- KEYS --------
+ammo_rockets: initial rockets of the weapon (if unset, g_pickup_rockets is used)
+respawntime: time till it respawns (default: 15)
+team: out of items with the same value here, only one (random one) will spawn. Useful to put multiple items on one spot.
+cnt: weight of this item for random selection using "team". Set to a lower value for items you want to see less likely.
+-------- SPAWNFLAGS --------
+FLOATING: the item will float in air, instead of aligning to the floor by falling
+-------- MODEL FOR RADIANT ONLY - DO NOT SET THIS AS A KEY --------
+model="models/weapons/g_gl.md3"
+*/
+
+/*QUAKED weapon_hagar (1 0 .5) (-30 -30 0) (30 30 32) FLOATING
+the Hagar
+-------- KEYS --------
+ammo_rockets: initial rockets of the weapon (if unset, g_pickup_rockets is used)
+respawntime: time till it respawns (default: 15)
+team: out of items with the same value here, only one (random one) will spawn. Useful to put multiple items on one spot.
+cnt: weight of this item for random selection using "team". Set to a lower value for items you want to see less likely.
+-------- SPAWNFLAGS --------
+FLOATING: the item will float in air, instead of aligning to the floor by falling
+-------- MODEL FOR RADIANT ONLY - DO NOT SET THIS AS A KEY --------
+model="models/weapons/g_hagar.md3"
+*/
+
+/*QUAKED weapon_hlac (1 0 .5) (-30 -30 0) (30 30 32) FLOATING
+the Heavy Laser Assault Cannon.
+-------- KEYS --------
+ammo_cells: initial cells of the weapon (if unset, g_pickup_cells is used)
+respawntime: time till it respawns (default: 30)
+team: out of items with the same value here, only one (random one) will spawn. Useful to put multiple items on one spot.
+cnt: weight of this item for random selection using "team". Set to a lower value for items you want to see less likely.
+-------- SPAWNFLAGS --------
+FLOATING: the item will float in air, instead of aligning to the floor by falling
+-------- MODEL FOR RADIANT ONLY - DO NOT SET THIS AS A KEY --------
+model="models/weapons/g_hlac.md3"
+*/
+
+/*QUAKED weapon_hook (1 0 .5) (-30 -30 0) (30 30 32) FLOATING
+the on-hand Grappling Hook.
+-------- KEYS --------
+ammo_cells: initial cells of the weapon (if unset, g_pickup_cells is used)
+respawntime: time till it respawns (default: 30)
+team: out of items with the same value here, only one (random one) will spawn. Useful to put multiple items on one spot.
+cnt: weight of this item for random selection using "team". Set to a lower value for items you want to see less likely.
+-------- SPAWNFLAGS --------
+FLOATING: the item will float in air, instead of aligning to the floor by falling
+-------- MODEL FOR RADIANT ONLY - DO NOT SET THIS AS A KEY --------
+model="models/weapons/g_hookgun.md3"
+*/
+
+/*QUAKED weapon_laser (1 0 .5) (-30 -30 0) (30 30 32) FLOATING
+the Laser. Note that unless you use
+  settemp_for_type all g_start_weapon_laser 0
+in your mapinfo file, everyone will already spawn with one, making this pickup useless.
+-------- KEYS --------
+respawntime: time till it respawns (default: 15)
+team: out of items with the same value here, only one (random one) will spawn. Useful to put multiple items on one spot.
+cnt: weight of this item for random selection using "team". Set to a lower value for items you want to see less likely.
+-------- SPAWNFLAGS --------
+FLOATING: the item will float in air, instead of aligning to the floor by falling
+-------- MODEL FOR RADIANT ONLY - DO NOT SET THIS AS A KEY --------
+model="models/weapons/g_laser.md3"
+*/
+
+/*QUAKED weapon_minstanex (1 0 .5) (-30 -30 0) (30 30 32) FLOATING
+Placing this entity on a map kills your cat, voids the warranty on your toaster, and makes your map an unenjoyable campers' paradise.
+the MinstaGib Nex. Always kills with one shot.
+-------- KEYS --------
+ammo_cells: initial cells of the weapon (if unset, g_pickup_cells is used)
+respawntime: time till it respawns (default: 15)
+team: out of items with the same value here, only one (random one) will spawn. Useful to put multiple items on one spot.
+cnt: weight of this item for random selection using "team". Set to a lower value for items you want to see less likely.
+-------- SPAWNFLAGS --------
+FLOATING: the item will float in air, instead of aligning to the floor by falling
+-------- MODEL FOR RADIANT ONLY - DO NOT SET THIS AS A KEY --------
+model="models/weapons/g_minstanex.md3"
+*/
+
+/*QUAKED weapon_nex (1 0 .5) (-30 -30 0) (30 30 32) FLOATING
+the Nex
+In Minstagib, this turns into an item_minst_cells if no explicit item_minst_cells have been placed.
+-------- KEYS --------
+ammo_cells: initial cells of the weapon (if unset, g_pickup_cells is used)
+respawntime: time till it respawns (default: 15 * g_balance_nex_respawntime_modifier)
+team: out of items with the same value here, only one (random one) will spawn. Useful to put multiple items on one spot.
+cnt: weight of this item for random selection using "team". Set to a lower value for items you want to see less likely.
+-------- SPAWNFLAGS --------
+FLOATING: the item will float in air, instead of aligning to the floor by falling
+-------- MODEL FOR RADIANT ONLY - DO NOT SET THIS AS A KEY --------
+model="models/weapons/g_nex.md3"
+*/
+
+/*QUAKED weapon_porto (1 0 .5) (-30 -30 0) (30 30 32) FLOATING
+the Port-O-Launch. Only can be shot once.
+Portals cannot be made on noimpact surfaces, and the portal missile will bounce on slick surfaces.
+-------- KEYS --------
+respawntime: time till it respawns (default: 120)
+team: out of items with the same value here, only one (random one) will spawn. Useful to put multiple items on one spot.
+cnt: weight of this item for random selection using "team". Set to a lower value for items you want to see less likely.
+-------- SPAWNFLAGS --------
+FLOATING: the item will float in air, instead of aligning to the floor by falling
+-------- MODEL FOR RADIANT ONLY - DO NOT SET THIS AS A KEY --------
+model="models/weapons/g_porto.md3"
+*/
+
+/*QUAKED weapon_rocketlauncher (1 0 .5) (-30 -30 0) (30 30 32) FLOATING
+the Rocket Launcher
+In Minstagib, this turns into an item_minst_cells if no explicit item_minst_cells have been placed.
+-------- KEYS --------
+ammo_rockets: initial rockets of the weapon (if unset, g_pickup_rockets is used)
+respawntime: time till it respawns (default: 15)
+team: out of items with the same value here, only one (random one) will spawn. Useful to put multiple items on one spot.
+cnt: weight of this item for random selection using "team". Set to a lower value for items you want to see less likely.
+-------- SPAWNFLAGS --------
+FLOATING: the item will float in air, instead of aligning to the floor by falling
+-------- MODEL FOR RADIANT ONLY - DO NOT SET THIS AS A KEY --------
+model="models/weapons/g_rl.md3"
+*/
+
+/*QUAKED weapon_seeker (1 0 .5) (-30 -30 0) (30 30 32) FLOATING
+the T.A.G. Seeker.
+-------- KEYS --------
+ammo_rockets: initial rockets of the weapon (if unset, g_pickup_rockets is used)
+respawntime: time till it respawns (default: 30)
+team: out of items with the same value here, only one (random one) will spawn. Useful to put multiple items on one spot.
+cnt: weight of this item for random selection using "team". Set to a lower value for items you want to see less likely.
+-------- SPAWNFLAGS --------
+FLOATING: the item will float in air, instead of aligning to the floor by falling
+-------- MODEL FOR RADIANT ONLY - DO NOT SET THIS AS A KEY --------
+model="models/weapons/g_seeker.md3"
+*/
+
+/*QUAKED weapon_shotgun (1 0 .5) (-30 -30 0) (30 30 32) FLOATING
+the Shotgun. Note that unless you use
+  settemp_for_type all g_start_weapon_shotgun 0
+in your mapinfo file, everyone will already spawn with one, making this pickup useless.
+-------- KEYS --------
+ammo_shells: initial shells of the weapon (if unset, g_pickup_shells is used)
+respawntime: time till it respawns (default: 15)
+team: out of items with the same value here, only one (random one) will spawn. Useful to put multiple items on one spot.
+cnt: weight of this item for random selection using "team". Set to a lower value for items you want to see less likely.
+-------- SPAWNFLAGS --------
+FLOATING: the item will float in air, instead of aligning to the floor by falling
+-------- MODEL FOR RADIANT ONLY - DO NOT SET THIS AS A KEY --------
+model="models/weapons/g_shotgun.md3"
+*/
+
+/*QUAKED weapon_tuba (1 0 .5) (-30 -30 0) (30 30 32) FLOATING
+the epic tuba
+-------- KEYS --------
+respawntime: time till it respawns (default: 15)
+team: out of items with the same value here, only one (random one) will spawn. Useful to put multiple items on one spot.
+cnt: weight of this item for random selection using "team". Set to a lower value for items you want to see less likely.
+-------- SPAWNFLAGS --------
+FLOATING: the item will float in air, instead of aligning to the floor by falling
+-------- MODEL FOR RADIANT ONLY - DO NOT SET THIS AS A KEY --------
+model="models/weapons/g_tuba.md3"
+*/
+
+/*QUAKED weapon_uzi (1 0 .5) (-30 -30 0) (30 30 32) FLOATING
+the Machine Gun
+-------- KEYS --------
+ammo_nails: initial bullets of the weapon (if unset, g_pickup_nails is used)
+respawntime: time till it respawns (default: 15)
+team: out of items with the same value here, only one (random one) will spawn. Useful to put multiple items on one spot.
+cnt: weight of this item for random selection using "team". Set to a lower value for items you want to see less likely.
+-------- SPAWNFLAGS --------
+FLOATING: the item will float in air, instead of aligning to the floor by falling
+-------- MODEL FOR RADIANT ONLY - DO NOT SET THIS AS A KEY --------
+model="models/weapons/g_uzi.md3"
+*/
