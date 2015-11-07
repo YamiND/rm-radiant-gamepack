@@ -1,0 +1,10 @@
+
+/*QUAKED trigger_killcredit (.5 .5 .5) ?
+[RocketMinsta entity]
+
+An auxiliary brush entity intended for player-triggered traps. Needs to be targeted by something, e.g. a button that activates the trap. When active, this trigger will mark every player inside it as "pushed" by the activator. This means that if someone takes damage from and/or dies to a map entity (such as a trigger_hurt, a func_door or a func_laserbeam) shortly after visiting this trigger, the activator will be credited for the damage and/or death inflicted.
+-------- KEYS --------
+wait: how long the trigger remains active after it has been used. Set this to however long your trap remains dangerous. The default is 3 seconds.
+targetname: the name other entities can use to target this entity.
+*/
+
