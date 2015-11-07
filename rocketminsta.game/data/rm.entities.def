@@ -17,3 +17,20 @@ Used to release buffs and switch nadget classes midgame
 model="models/it/pc.md3"
 */
 
+
+
+/*QUAKED func_laserbeam (1.0 0.4 0.1) (-4 -4 -4) (4 4 4) DISABLED
+[RocketMinsta entity]
+
+A zapper-like laser beam. Can fire in a preset direction or aim at an entity. Toggled when activated.
+-------- KEYS --------
+sounds: if 1, makes loud noise.
+dmg: damage to inflict every 0.1s.
+color: the beam color, can be one of the following: 1 = red, 2 = blue, 3 = yellow, 4 = pink. The default is red.
+target: if set, aim at the origin of the targeted entity.
+targetname: the name other entities can use to target this entity. The beam is toggled when activated.
+angles: the aim direction. This is ignored if target is set.
+t_length: maximum length of the beam. -1 for unlimited range. 0 (default) makes the beam stop exactly at the origin of the target if one exists, otherwise it's the same as -1.
+-------- SPAWNFLAGS --------
+DISABLED: the beam is initially disabled and needs to be activated to start firing.
+*/
