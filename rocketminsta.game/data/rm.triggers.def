@@ -15,7 +15,7 @@ targetname: the name other entities can use to target this entity.
 
 A non-deterministic trigger_relay. Has a random chance to trigger all of its targets when activated.
 -------- KEYS --------
-cnt: the activation chance. Should be >0 and <1. 0.5 for a 50% chance, 0.75 for 75%, etc.
+cnt: the activation chance. Should be >0 and <1. 0.5 for a 50% chance, 0.75 for 75%, etc. The default is 0.5.
 target: trigger all entities with this targetname when triggered
 target2: trigger all entities with this targetname when triggered
 target3: trigger all entities with this targetname when triggered
