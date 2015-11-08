@@ -8,3 +8,39 @@ wait: how long the trigger remains active after it has been used. Set this to ho
 targetname: the name other entities can use to target this entity.
 */
 
+
+
+/*QUAKED trigger_relay_chance (.5 .5 .5) (-8 -8 -8) (8 8 8)
+[RocketMinsta entity]
+
+A non-deterministic trigger_relay. Has a random chance to trigger all of its targets when activated.
+-------- KEYS --------
+cnt: the activation chance. Should be >0 and <1. 0.5 for a 50% chance, 0.75 for 75%, etc.
+target: trigger all entities with this targetname when triggered
+target2: trigger all entities with this targetname when triggered
+target3: trigger all entities with this targetname when triggered
+target4: trigger all entities with this targetname when triggered
+targetname: name that identifies this entity so it can be triggered
+delay: delay the triggering by the given time
+message: print this message to the player who activated the trigger
+killtarget: remove all entities with this targetname when triggered
+*/
+
+
+
+/*QUAKED trigger_relay_random (.5 .5 .5) (-8 -8 -8) (8 8 8)
+[RocketMinsta entity]
+
+A non-deterministic trigger_relay. Triggers one of its targets when activated, chosen randomly.
+
+It always triggers exactly one entity, even if multiple entities share the targetname that this relay targets. If you want to trigger multiple entities at once, you should route them through an additional trigger_relay instead of directly targeting them here.
+-------- KEYS --------
+target: trigger one of the entities with this targetname when triggered
+target2: trigger one of the entities with this targetname when triggered
+target3: trigger one of the entities with this targetname when triggered
+target4: trigger one of the entities with this targetname when triggered
+targetname: name that identifies this entity so it can be triggered
+delay: delay the triggering by the given time
+message: print this message to the player who activated the trigger
+killtarget: remove all entities with this targetname when triggered
+*/
