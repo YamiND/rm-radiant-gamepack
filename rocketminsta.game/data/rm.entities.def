@@ -59,9 +59,8 @@ TOGGLE: activating this magicwall will cause it to disperse if solidified, or so
 
 /*QUAKED advertisement (0.5 0.5 0.5) ?
 [RocketMinsta entity]
+[Do Not Use]
 
-Do not use this entity.
-
-It's equivalent to a func_wall and only exists to provide compatibility with Quake Live maps.
+This entity is equivalent to a func_wall and only exists to provide compatibility with Quake Live maps.
 */
 
