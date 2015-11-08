@@ -44,3 +44,44 @@ delay: delay the triggering by the given time
 message: print this message to the player who activated the trigger
 killtarget: remove all entities with this targetname when triggered
 */
+
+
+
+/*QUAKED trigger_cycle (.5 .5 .5) (-8 -8 -8) (8 8 8)
+[RocketMinsta entity]
+
+A self-retargeting relay-like trigger. When triggered, it first triggers its targets like a relay, then changes its "target" key to the next value in the chain, then triggers its targets again (now with the new target name). It's mainly intended to be used with "toggle"-type entities.
+
+To construct the target chain, you must set the "chaintarget" key on the targeted entities. This key must point to the next target in the chain. The chain should eventually loop back to the original target.
+
+Example usage:
+
+    func_button:
+        target: sequence_master
+
+    trigger_cycle:
+        targetname: sequence_master
+        target: sequence_1
+
+    func_magicwall:
+        targetname: sequence_1
+        chaintarget: sequence_2
+        spawnflags: 8
+
+    func_magicwall:
+        targetname: sequence_2
+        chaintarget: sequence_3
+        spawnflags: 8
+
+    func_magicwall:
+        targetname: sequence_3
+        chaintarget: sequence_1
+        spawnflags: 8
+
+-------- KEYS --------
+target: the first target in the chain
+targetname: name that identifies this entity so it can be triggered
+delay: delay the triggering by the given time
+message: print this message to the player who activated the trigger
+killtarget: remove all entities with this targetname when triggered
+*/
