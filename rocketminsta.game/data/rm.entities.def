@@ -57,7 +57,7 @@ TOGGLE: activating this magicwall will cause it to disperse if solidified, or so
 
 
 
-/*QUAKED func_advertisement (0.5 0.5 0.5) ?
+/*QUAKED advertisement (0.5 0.5 0.5) ?
 [RocketMinsta entity]
 
 Do not use this entity.
