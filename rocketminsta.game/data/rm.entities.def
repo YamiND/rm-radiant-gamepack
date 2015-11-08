@@ -54,3 +54,14 @@ wait: time to wait before returning to the original state (after the transition 
 INVERTED: this magicwall is dispersed by default and solidified when activated.
 TOGGLE: activating this magicwall will cause it to disperse if solidified, or solidify if dispersed. The magicwall will remain in its current state until it's activated again, the "wait" key is ignored.
 */
+
+
+
+/*QUAKED func_advertisement (0.5 0.5 0.5) ?
+[RocketMinsta entity]
+
+Do not use this entity.
+
+It's equivalent to a func_wall and only exists to provide compatibility with Quake Live maps.
+*/
+
